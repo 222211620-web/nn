@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot Accessibility🤖</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+      font-size: 20px;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #fff;
+    }
+
+    .dark-mode header {
+      background-color: #333;
+    }
+
+    #dark-mode-toggle {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    #chat-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #chat-box {
+      width: 100%;
+      max-width: 1333px;
+      height: 70vh;
+      overflow-y: auto;
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .dark-mode #chat-box {
+      background-color: #222;
+      color: white;
+    }
+
+    .message {
+      margin-bottom: 10px;
+    }
+
+    .user {
+      text-align: right;
+      color: #ab7474;
+    }
+
+    .bot {
+      text-align: left;
+      color: #a57e69;
+    }
+
+    #input-container {
+      display: flex;
+      width: 100%;
+      max-width: 600px;
+      margin-top: 10px;
+    }
+
+    #user-input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    #send-btn {
+      padding: 10px 20px;
+      margin-left: 10px;
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #send-btn:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    Chatbot Accessibility🤖
+  </header>
+
+  <div id="chat-container">
+    <div id="chat-box"></div>
+    <div id="input-container">
+      <input id="user-input" type="text" placeholder="Type your message..." />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* ===== إعداد الصفحة العامة ===== */
+body {
+  background: #f4f7fa;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ===== الصندوق العام للشات ===== */
+.chat-container {
+  width: 1333px;
+  height: 600px; /* ارتفاع ثابت للصندوق */
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ===== شريط العنوان ===== */
+.chat-header {
+  background: #4A90E2;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===== صندوق الرسائل (المحادثة فقط) ===== */
+.chat-box {
+  flex: 1; /* يملأ المساحة المتبقية */
+  padding: 15px;
+  overflow-y: auto; /* المحادثة فقط اللي تتحرك */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+/* ===== فقاعات الرسائل ===== */
+.message {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.user-message {
+  background: #DCF8C6;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background: #E5E5EA;
+  align-self: flex-start;
+}
+
+/* ===== منطقة الإدخال ===== */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.chat-input button {
+  background: #4A90E2;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background: #357ABD;
+}
